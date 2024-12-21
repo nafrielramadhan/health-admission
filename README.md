@@ -2,77 +2,86 @@
 
 ## **Project Overview**
 
-This project aims to analyze and predict health outcomes for patients admitted to a hospital based on various factors such as demographics, medical conditions, lab results, and duration of stay. The dataset includes detailed information about patient admission, diagnosis, and health status during their stay, which can be used to predict future patient outcomes, such as discharge or medical complications.
+This project is part of my **final assignment** for the **"Introduction to AI & Data Science"** course at the **Faculty of Computer Science, Universitas Indonesia**. The goal is to analyze and predict hospital admission outcomes using machine learning techniques. The dataset includes various features related to patient demographics, medical conditions, lab results, and outcomes during their hospital stay.
 
-The project is part of my **final assignment** for the **"Introduction to AI & Data Science"** course at the **Faculty of Computer Science, Universitas Indonesia**.
-
-## **Dataset Description**
-
-The dataset contains information about patients admitted to the hospital, including general details, diagnosis, lab results, and duration of stay. Below is a description of the key columns in the dataset:
-
-### **Data Columns:**
-
-- **SNO**: Serial Number (unique identifier)
-- **MRD No.**: Admission Number
-- **D.O.A**: Date of Admission
-- **D.O.D**: Date of Discharge
-- **AGE**: Patient's age
-- **GENDER**: Patient's gender (F for Female, M for Male)
-- **RURAL**: Patient's household area (U for Urban, R for Rural)
-- **TYPE OF ADMISSION-EMERGENCY/OPD**: Type of admission (O for Outpatient, E for Emergency)
-- **month year**: Month and year of admission
-- **DURATION OF STAY**: Duration of stay in the hospital (in days)
-- **duration of intensive unit stay**: Duration of stay in the intensive care unit (ICU)
-- **SMOKING**: Whether the patient smokes (1 for True, 0 for False)
-- **ALCOHOL**: Whether the patient drinks alcohol (1 for True, 0 for False)
-- **DM**: Diabetes Mellitus (1 for True, 0 for False)
-- **HTN**: Hypertension (1 for True, 0 for False)
-- **CAD**: Coronary Artery Disease (1 for True, 0 for False)
-- **PRIOR CMP**: Cardiomyopathy (1 for True, 0 for False)
-- **CKD**: Chronic Kidney Disease (1 for True, 0 for False)
-- **TLC**: Total Leukocytes Count
-- **PLATELETS**: Platelets count
-- **GLUCOSE**: Glucose level in the patient
-- **UREA**: Urea level
-- **CREATININE**: Creatinine level
-- **BNP**: B-type Natriuretic Peptide level
-- **RAISED CARDIAC ENZYMES**: Elevated cardiac enzyme levels
-- **EF**: Ejection Fraction
-- **SEVERE ANAEMIA**: Whether the patient has severe anemia (1 for True, 0 for False)
-- **ANAEMIA**: Whether the patient has anemia (1 for True, 0 for False)
-- **STABLE ANGINA**: Whether the patient has stable angina (1 for True, 0 for False)
-- **ACS**: Acute Coronary Syndrome (1 for True, 0 for False)
-- **STEMI**: ST Elevation Myocardial Infarction (1 for True, 0 for False)
-- **ATYPICAL CHEST PAIN**: Whether the patient has atypical chest pain (1 for True, 0 for False)
-- **HEART FAILURE**: Whether the patient has heart failure (1 for True, 0 for False)
-- **HFREF**: Heart Failure with Reduced Ejection Fraction (1 for True, 0 for False)
-- **HFNEF**: Heart Failure with Normal Ejection Fraction (1 for True, 0 for False)
-- **VALVULAR**: Valvular Heart Disease (1 for True, 0 for False)
-- **CHB**: Complete Heart Block (1 for True, 0 for False)
-- **SSS**: Sick Sinus Syndrome (1 for True, 0 for False)
-- **AKI**: Acute Kidney Injury (1 for True, 0 for False)
-- **CVA INFRACT**: Cerebrovascular Accident Infarct (1 for True, 0 for False)
-- **CVA BLEED**: Cerebrovascular Accident Bleed (1 for True, 0 for False)
-- **AF**: Atrial Fibrillation (1 for True, 0 for False)
-- **VT**: Ventricular Tachycardia (1 for True, 0 for False)
-- **PSVT**: Paroxysmal Supraventricular Tachycardia (1 for True, 0 for False)
-- **CONGENITAL**: Congenital Heart Disease (1 for True, 0 for False)
-- **UTI**: Urinary Tract Infection (1 for True, 0 for False)
-- **NEURO CARDIOGENIC SYNCOPE**: Neuro Cardiac Syncope (1 for True, 0 for False)
-- **ORTHOSTATIC**: Orthostatic Hypotension (1 for True, 0 for False)
-- **INFECTIVE ENDOCARDITIS**: Infective Endocarditis (1 for True, 0 for False)
-- **DVT**: Deep Venous Thrombosis (1 for True, 0 for False)
-- **CARDIOGENIC SHOCK**: Cardiogenic Shock (1 for True, 0 for False)
-- **SHOCK**: General Shock (1 for True, 0 for False)
-- **PULMONARY EMBOLISM**: Pulmonary Embolism (1 for True, 0 for False)
-- **CHEST INFECTION**: Chest Infection (1 for True, 0 for False)
-- **OUTCOME**: Outcome of the patient (Discharge, DAMA - Discharged Against Medical Advice, Expiry)
-- **HB**: Hemoglobin level
+The project applies **Exploratory Data Analysis (EDA)** for data visualization and analysis, followed by **machine learning** models to predict patient outcomes, such as discharge, expiry, or DAMA (Discharged Against Medical Advice).
 
 ## **Project Objectives**
 
-The goal of this project is to:
+The key objectives of this project are to:
 
-1. Analyze the health admission data to understand the relationships between patient demographics, medical conditions, and hospital outcomes.
-2. Apply machine learning techniques to predict patient outcomes based on various factors.
-3. Use statistical analysis and data visualization to explore and present insights.
+- **Analyze health admission data** to uncover patterns and relationships between patient demographics, medical conditions, and hospital outcomes.
+- **Apply machine learning techniques** to predict patient outcomes (e.g., discharge, expiry) based on factors such as age, gender, smoking habits, medical history, and lab results.
+- **Use statistical analysis and data visualization** to explore the data and provide meaningful insights.
+- **Apply clustering techniques** to analyze and identify different groups of patients based on their characteristics and outcomes.
+
+## **Methodology**
+
+### 1. **Data Preprocessing**
+
+### 2. **Exploratory Data Analysis (EDA)**
+
+### 3. **Classification Models**
+
+The classification task is aimed at predicting categorical outcomes such as whether a patient will be **discharged** or face **expiry**. Several classification models were tested for this task, including:
+
+- **Random Forest Classifier**
+- **Naive Bayes Classifier (Bernoulli)**
+- **K-Nearest Neighbor (KNN)**
+
+These models are suitable for mixed input types (nominal and categorical) and can handle **multi-class outputs** (more than two categories).
+
+### **Handling Imbalanced Classes**
+
+Since the dataset may have imbalanced classes (i.e., some outcomes may occur more frequently than others), several **oversampling** and **undersampling** techniques were applied to balance the class distribution:
+
+- **Random Oversampling**
+- **Borderline-SMOTE**
+- **SMOTE**
+- **ADASYN**
+- **Random Undersampling**
+- **Tomek Links**
+
+### **Best Performing Model for Classification:**
+
+After evaluating various classification models, the **Random Forest Classifier** with **Tomek Links** and **Random Undersampling** was found to provide the best performance. Below are the results and rationale behind the choice of the model:
+
+- **Random Forest with Tomek Links:**
+    - **Accuracy**: 0.93
+    - **Recall**: 0.63
+- **Random Forest with Random Undersampler:**
+    - **Accuracy**: 0.77
+    - **Recall**: 0.79
+
+### **Why High Recall?**
+
+We chose to prioritize **Recall** over **Accuracy** in this project, as the primary concern in health admission prediction is minimizing **false negatives**. A high **Recall** value ensures that fewer critical cases are missed, especially for outcomes like **Expiry**. A false negative in this case, where a seriously ill patient is misclassified as healthy, could have severe consequences and compromise patient safety. Therefore, **Recall** is a key metric in healthcare predictions, where identifying every possible risk is crucial for the wellbeing of patients.
+
+### 4. **Regression Models**
+
+For continuous outcome prediction (e.g., **duration of hospital stay**), the following regression models were tested:
+
+- **Linear Regression**
+- **Lasso Regression**
+- **Ridge Regression**
+- **SVR (Support Vector Regression)**
+- **Decision Tree Regression**
+- **Random Forest Regression**
+
+### **Best Performing Model for Regression**
+
+The **Random Forest Regression** model performed the best, achieving:
+
+- **Mean Squared Error (MSE)**: 0.0015 (lowest)
+- **Root Mean Squared Error (RMSE)**: 0.039 (lowest)
+- **R-Squared (R²)**: 0.648 (highest)
+- **Mean Absolute Error (MAE)**: 0.024 (lowest)
+
+### 5. **Clustering Models**
+
+To analyze patterns and group patients into different clusters, the following clustering techniques were applied:
+
+- **K-Means Clustering.**
+- **K-Means Clustering without PCA**
+- **Agglomerative Clustering**
+- **DBSCAN (Density-Based Spatial Clustering of Applications with Noise)**
